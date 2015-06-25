@@ -3,17 +3,16 @@ var securityQuestions = [{question: 'How old are you?', exAnswer: 15},{question:
 function ask() {
     var i = 0;
 	while (i < 3) {
-	    console.log(securityQuestions[i].question);
-		var answer = prompt();
+		var answer = prompt(securityQuestions[i].question);
 		if (answer == securityQuestions[i].exAnswer) {
 			i++;
 		}
 		else {
-			console.log('Access denied. Please try again.');
+			alert('Access denied. Please try again.');
 			break;
 		}
 	}
 	if (i === 3) {
-		console.log('Welcome back!');
+		alert('Welcome back!');
 	}
 }

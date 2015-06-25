@@ -1,11 +1,10 @@
 function beer() {
-	console.log("How many bottles?");
-	var count = prompt();
+	var count = prompt("How many bottles?");
 	while (count > 0) {
 		if (count > 2) {
 			console.log(count + ' bottles of beer on the wall. ' + count + ' bottles of beer.');
 			console.log('Take one down, pass it around ...');
-			console.log((count - 1) + ' bottles of beer on the wall');
+			console.log((count - 1) + ' bottles of beer on the wall.');
 			count--;
 		}
 		else if (count === 2) {

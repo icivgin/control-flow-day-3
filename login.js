@@ -1,25 +1,28 @@
 var userLogin = {name: 'John', password:'fun'};
+
 function login() {
     var i = 0;
+    var access = false;
 	while (i < 2) {
-    	console.log('Enter password for user ' + userLogin.name);
-		var password = prompt ();
+		var password = prompt ('Enter password for user ' + userLogin.name);
 		if (password == userLogin.password) {
-			console.log('Access Granted');
+			alert('Access Granted');
+			access = true;
 			break;
 		}
 		else {
-			console.log('Access Denied!');
+			alert('Access Denied!');
 			i++;
 		}
 	}
-	console.log('Enter password for user ' + userLogin.name);
-	var password = prompt ();
-	if (password == userLogin.password) {
-		console.log('Access Granted');
-	}
-	else {
-		console.log('Access Denied! You have tried 3 times, go home!');
-		i++;
+    if (!access) {
+        var password = prompt ('Enter password for user ' + userLogin.name);
+        if (password == userLogin.password) {
+            alert('Access Granted');
+        }
+        else {
+            alert('Access Denied! You have tried 3 times, go home!');
+            i++;
+        }
     }
 }
