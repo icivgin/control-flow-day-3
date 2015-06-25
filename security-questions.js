@@ -1,10 +1,14 @@
-var securityQuestions = [{question: 'How old are you?', exAnswer: 15},{question: 'Where are you from?', exAnswer: 'Chicago'}, {question: 'In which month is your birthday?', exAnswer: 'March'}];
+var securityQuestions = [
+{question: 'How old are you?', expectedAnswer: 15},
+{question: 'Where are you from?', expectedAnswer: 'Chicago'}, 
+{question: 'In which month is your birthday?', expectedAnswer: 'March'}
+];
 
 function ask() {
     var i = 0;
 	while (i < 3) {
 		var answer = prompt(securityQuestions[i].question);
-		if (answer == securityQuestions[i].exAnswer) {
+		if (answer == securityQuestions[i].expectedAnswer) {
 			i++;
 		}
 		else {
